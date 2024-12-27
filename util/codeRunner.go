@@ -20,7 +20,7 @@ func RunCode(wg *sync.WaitGroup, code *CodeSample, content string) {
 	defer DeleteFile(filepath)
 
 	start := time.Now()
-	cmd := exec.Command("python", filepath)
+	cmd := exec.Command("python3", filepath)
 	elapsed := time.Since(start)
 
 	code.TimeTaken = int(elapsed)
